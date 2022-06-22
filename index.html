@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Bellybutton Biodiversity - Module 12</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+</head>
+
+<body>
+
+  <div class="container-fluid">
+
+    <div class="row">
+      <div class="col-md-12 jumbotron text-left">
+        <h1>Belly Button Biodiversity Dashboard</h1>
+        <p>Use the interactive charts below to explore the dataset</p>
+      </div>
+    </div>
+
+    <!-- ************************************ -->
+    <!-- NAV BAR -->
+    <nav class="navbar navbar-default">
+      <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+          <a class="navbar-brand" href="#">Dashboard &nbsp; &nbsp; > &nbsp; &nbsp;</a>
+        </div>
+    
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+          <ul class="nav navbar-nav">
+            <li><a href="#bar">Bar graph</a></li>
+            <li><a href="#gauge">Gauge</a></li>
+            <li><a href="#bubble">Bubble chart</a></li>
+          </ul>
+        </div><!-- /.navbar-collapse -->
+      </div><!-- /.container-fluid -->
+    </nav>
+
+    <!-- ******************************** -->
+    <div class="row">
+
+      <!-- Combo menu - Subject ID row -->
+      <div class="col-md-12">
+        <div class="panel panel-primary">
+          <div class="panel-heading"> <span class="glyphicon glyphicon-search" aria-hidden="true"></span> Please, select
+            a Test Subject ID:</div>
+          <div class="panel-body">
+            <select id="selDataset" onchange="optionChanged(this.value)"
+              class="btn btn-secondary dropdown-toggle"></select>
+          </div>
+        </div>
+      </div>
+
+      <!-- Demographic info -->
+      <div class="col-md-12">
+        <div class="panel panel-info">
+          <div class="panel-heading">
+            <h3 class="panel-title"> <span class="glyphicon glyphicon-book" aria-hidden="true"></span> Demographic
+              Information</h3>
+          </div>
+          <div class="panel-body">
+            <p id="sample-metadata" class="panel-body"></p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+    <!-- ******************************** -->
+
+    <!-- ******************************** -->
+    <div class="row">
+
+      <!-- bar graph -->
+      <div class="col-md-6 panel panel-success">
+        <div class="panel-heading">
+          <h3 class="panel-title"> <span class="glyphicon glyphicon-stats" aria-hidden="true"></span> Bar Graph</h3>
+        </div>
+        <div class="panel-body">
+          <div id="bar"></div>
+        </div>
+      </div>
+
+      <!-- Gauge -->
+      <div class="col-md-6 panel panel-success">
+        <div class="panel-heading">
+          <h3 class="panel-title"> <span class="glyphicon glyphicon-dashboard" aria-hidden="true"></span> Gauge</h3>
+        </div>
+        <div class="panel-body">
+          <div id="gauge"></div>
+        </div>
+      </div>
+
+    </div>
+    <!-- ******************************** -->
+
+    <!-- ******************************** -->
+    <!-- Bubble Chart -->
+    <div class="row">
+
+      <div class="col-md-12 panel panel-success">
+
+        <div class="panel-heading">
+          <h3 class="panel-title"> <span class="glyphicon glyphicon-scale" aria-hidden="true"></span> Bubble Chart</h3>
+        </div>
+        <div class="panel-body">
+          <div id="bubble"></div>
+        </div>
+
+      </div>
+
+    </div>
+    <!-- ******************************** -->
+
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.5.0/d3.js"></script>
+  <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+  <script src="static/js/charts.js"></script>
+
+</body>
+
+</html>
